@@ -8,7 +8,7 @@ export class UrlService {
 
   constructor(private http:HttpClient) { }
 
-  saveUrl(longUrl:string) : Observable<any>{//https://ti-nyurl.herokuapp.com/generate
-    return <Observable<any>> this.http.post("https://covidindia-stats.herokuapp.com/",longUrl,{responseType:'text'});//
+  saveUrl(longUrl:string) : Observable<any>{
+    return <Observable<any>> this.http.post("https://ti-nyurl.herokuapp.com/generate",longUrl,{responseType:'text'});
   }
 }
